@@ -24,7 +24,7 @@ if(CV_BRIDGE_DISABLE_PYTHON)
 else()
   find_package(Python3 REQUIRED COMPONENTS Development NumPy)
   find_package(Boost QUIET)
-  if(Boost_VERSION_STRING VERSION_LESS "1.67")
+  if(Boost_VERSION VERSION_LESS "1.67")
     # This is a bit of a hack to suppress a warning
     #   No header defined for python3; skipping header check
     # Which should only affect Boost versions < 1.67
